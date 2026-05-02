@@ -1,0 +1,1062 @@
+{
+  "version": "1.0",
+  "exam_date": "2026-05-09",
+  "source": {
+    "video_id": "BO05K85SBag",
+    "video_title": "【G検定 試験対策 一問一答100分！】｜全8章問題集！#聞き流し",
+    "video_url": "https://youtu.be/BO05K85SBag",
+    "channel": "日経新聞要約解説　診断士かつ丼【非公式】",
+    "note": "動画字幕は取得できなかったため、動画の章立て（JDLA G検定公式シラバス準拠 全8章）に沿って頻出用語をベースに作成。各カードのvideo_timestamp_urlは該当章の冒頭にジャンプする。"
+  },
+  "chapters": [
+    { "id": 1, "title": "人工知能とは？", "start_sec": 70, "end_sec": 783, "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=70" },
+    { "id": 2, "title": "人工知能をめぐる動向", "start_sec": 783, "end_sec": 1465, "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=783" },
+    { "id": 3, "title": "機械学習の具体的手法", "start_sec": 1465, "end_sec": 2528, "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465" },
+    { "id": 4, "title": "ディープラーニングの概要", "start_sec": 2528, "end_sec": 3360, "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=2528" },
+    { "id": 5, "title": "ディープラーニングの要素技術", "start_sec": 3360, "end_sec": 4009, "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=3360" },
+    { "id": 6, "title": "ディープラーニングの応用例", "start_sec": 4009, "end_sec": 4968, "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4009" },
+    { "id": 7, "title": "AIの社会実装に向けて", "start_sec": 4968, "end_sec": 5438, "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4968" },
+    { "id": 8, "title": "AIの法律と倫理", "start_sec": 5438, "end_sec": 6030, "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=5438" }
+  ],
+  "cards": [
+    {
+      "id": "ch1-001",
+      "chapter": 1,
+      "term": "人工知能（AI）",
+      "definition": "人間の知的活動を模倣・代替するコンピュータシステムや研究分野の総称。",
+      "explanation": "明確な統一定義はなく、研究者ごとに「推論や学習を行う機械」「人間と同等の知能を再現する技術」など差がある。JDLAでは応用範囲が広いことに留意。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=70"
+    },
+    {
+      "id": "ch1-002",
+      "chapter": 1,
+      "term": "ダートマス会議（1956年）",
+      "definition": "ジョン・マッカーシーらが「Artificial Intelligence」という言葉を初めて公式に用いた研究会議。",
+      "explanation": "AIという学問分野の起点。マッカーシー、ミンスキー、シャノン、ロチェスターが主催。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=70"
+    },
+    {
+      "id": "ch1-003",
+      "chapter": 1,
+      "term": "チューリングテスト",
+      "definition": "機械が人間と区別できないほど自然な対話を行えるかで知能を判定するテスト。",
+      "explanation": "1950年Alan Turing提案。Imitation Gameとも呼ぶ。判定者がテキスト対話で人間か機械か見抜けなければ合格。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=70"
+    },
+    {
+      "id": "ch1-004",
+      "chapter": 1,
+      "term": "AI効果（AI effect）",
+      "definition": "技術が実現された途端「単なる自動処理」と見なされAIと認識されなくなる現象。",
+      "explanation": "OCR、音声認識、将棋ソフトなどが典型例。Pamela McCorduckらが指摘。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=70"
+    },
+    {
+      "id": "ch1-005",
+      "chapter": 1,
+      "term": "強いAI / 弱いAI",
+      "definition": "強いAI=人間と同等の汎用的知能を持つAI。弱いAI=特定タスクに限定されたAI。",
+      "explanation": "ジョン・サールが提唱した分類。現在実用化されているAIは大半が弱いAI（特化型）。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=70"
+    },
+    {
+      "id": "ch1-006",
+      "chapter": 1,
+      "term": "中国語の部屋",
+      "definition": "ジョン・サールによる思考実験で、記号操作だけでは真の理解は生じないという主張。",
+      "explanation": "強いAI批判の代表例。部屋の中の人がマニュアルどおり中国語記号を返しても本人は中国語を理解していない。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=70"
+    },
+    {
+      "id": "ch1-007",
+      "chapter": 1,
+      "term": "シンギュラリティ（技術的特異点）",
+      "definition": "AIが人間の知能を超え、自己改良で加速度的に発展する転換点。",
+      "explanation": "レイ・カーツワイルが2045年到来と予測。汎用AI・自己再帰的改善が前提となる仮説。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=70"
+    },
+    {
+      "id": "ch1-008",
+      "chapter": 1,
+      "term": "第1次AIブーム（1950s〜60s）",
+      "definition": "推論・探索により迷路やパズルを解いた時代。トイプロブレムが中心。",
+      "explanation": "現実の複雑問題に歯が立たず冬の時代へ。代表技術はゲーム木探索・定理証明。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=70"
+    },
+    {
+      "id": "ch1-009",
+      "chapter": 1,
+      "term": "第2次AIブーム（1980年代）",
+      "definition": "知識をルール化して専門家の判断を再現する「エキスパートシステム」全盛期。",
+      "explanation": "MYCIN（医療診断）が代表例。知識獲得ボトルネックで衰退し再び冬の時代へ。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=70"
+    },
+    {
+      "id": "ch1-010",
+      "chapter": 1,
+      "term": "第3次AIブーム（2010年代〜）",
+      "definition": "ビッグデータ・GPU・ディープラーニングの3要素が揃って開花した現在のブーム。",
+      "explanation": "2012年ILSVRCのAlexNet勝利が象徴的。生成AIで第4次という見方もある。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=70"
+    },
+    {
+      "id": "ch1-011",
+      "chapter": 1,
+      "term": "ELIZA",
+      "definition": "1966年ワイゼンバウムが開発した擬似的な精神科医対話プログラム。",
+      "explanation": "パターンマッチで応答するだけだが、ユーザーが感情移入してしまう「ELIZA効果」を生んだ。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=70"
+    },
+    {
+      "id": "ch1-012",
+      "chapter": 1,
+      "term": "シンボルグラウンディング問題",
+      "definition": "記号（シンボル）と現実世界の意味を機械がどう結びつけるかという問題。",
+      "explanation": "ステヴァン・ハーナッドが提起。「シマウマ」という記号だけでは縞模様の馬と理解できない。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=70"
+    },
+    {
+      "id": "ch1-013",
+      "chapter": 1,
+      "term": "フレーム問題",
+      "definition": "現実世界の無限の事象から、今のタスクに関係する事項だけを切り出すのが困難という問題。",
+      "explanation": "1969年マッカーシー＆ヘイズ提起。AI研究の根源的難問のひとつ。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=70"
+    },
+    {
+      "id": "ch1-014",
+      "chapter": 1,
+      "term": "ノーフリーランチ定理",
+      "definition": "あらゆる問題で他より優れた汎用学習アルゴリズムは存在しないという定理。",
+      "explanation": "ウルパート＆マクレディ提唱。問題に応じて最適手法を選ぶ必要があることの理論的根拠。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=70"
+    },
+    {
+      "id": "ch1-015",
+      "chapter": 1,
+      "term": "汎用人工知能（AGI）",
+      "definition": "特定タスクに限定されず、人間のように幅広い問題を学習・解決できるAI。",
+      "explanation": "対義はANI（特化型AI）。さらに人を超えるASI（超人工知能）も将来的概念として議論される。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=70"
+    },
+
+    {
+      "id": "ch2-001",
+      "chapter": 2,
+      "term": "推論・探索の時代",
+      "definition": "第1次AIブーム期に主流だった、ゲーム木や探索アルゴリズムでパズルを解くアプローチ。",
+      "explanation": "深さ優先探索・幅優先探索・最良優先探索などが研究された。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=783"
+    },
+    {
+      "id": "ch2-002",
+      "chapter": 2,
+      "term": "幅優先探索 / 深さ優先探索",
+      "definition": "探索木をBFS=層単位、DFS=末端まで一気に進む手法。",
+      "explanation": "BFSは最短経路を保証するがメモリ消費大、DFSは省メモリだが最短保証なし。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=783"
+    },
+    {
+      "id": "ch2-003",
+      "chapter": 2,
+      "term": "ヒューリスティック探索（A*等）",
+      "definition": "推定コスト（ヒューリスティック関数）を使い効率的に解にたどり着く探索手法。",
+      "explanation": "A*は g(n)+h(n) を評価。h(n)が許容的なら最短経路を保証。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=783"
+    },
+    {
+      "id": "ch2-004",
+      "chapter": 2,
+      "term": "Mini-Max法 / αβ法",
+      "definition": "二人ゲームで自分の利得最大・相手の利得最小を仮定して最善手を選ぶ探索アルゴリズム。",
+      "explanation": "αβ枝刈りで明らかに無駄な分岐を切り捨て高速化する。チェス・将棋AIの基礎。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=783"
+    },
+    {
+      "id": "ch2-005",
+      "chapter": 2,
+      "term": "モンテカルロ木探索（MCTS）",
+      "definition": "ランダムプレイアウトを多数行い勝率の高い手を選ぶ探索法。",
+      "explanation": "AlphaGoの中核技術のひとつ。UCB1で探索と活用のバランスを取る。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=783"
+    },
+    {
+      "id": "ch2-006",
+      "chapter": 2,
+      "term": "知識表現の時代",
+      "definition": "第2次AIブームの中心テーマで、専門知識をルール・意味ネットワークで表現する研究。",
+      "explanation": "is-a関係などの意味ネットワーク、フレーム理論、オントロジーが重要。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=783"
+    },
+    {
+      "id": "ch2-007",
+      "chapter": 2,
+      "term": "エキスパートシステム",
+      "definition": "専門家の知識をif-thenルールで表現し推論エンジンが結論を導くシステム。",
+      "explanation": "代表例MYCIN（感染症診断）、DENDRAL（化学物質特定）。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=783"
+    },
+    {
+      "id": "ch2-008",
+      "chapter": 2,
+      "term": "知識獲得ボトルネック",
+      "definition": "専門家の暗黙知をルール化する作業が膨大で、エキスパートシステム普及の足枷になった問題。",
+      "explanation": "第2次AIブーム終焉の主因のひとつ。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=783"
+    },
+    {
+      "id": "ch2-009",
+      "chapter": 2,
+      "term": "オントロジー",
+      "definition": "概念間の関係や階層を厳密に体系化した知識記述の枠組み。",
+      "explanation": "ヘビーウェイトオントロジー（厳密記述）／ライトウェイトオントロジー（緩やかなタグ付け）に大別。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=783"
+    },
+    {
+      "id": "ch2-010",
+      "chapter": 2,
+      "term": "Cycプロジェクト",
+      "definition": "1984年ダグラス・レナートが開始した、人間の常識をすべて記述しようとする壮大な知識ベース。",
+      "explanation": "30年以上続く長期プロジェクト。常識推論の難しさを象徴。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=783"
+    },
+    {
+      "id": "ch2-011",
+      "chapter": 2,
+      "term": "セマンティックウェブ",
+      "definition": "Web上のデータに意味（メタデータ）を付与し機械が解釈できるようにする構想。",
+      "explanation": "ティム・バーナーズ＝リーが提唱。RDF・OWLが基盤技術。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=783"
+    },
+    {
+      "id": "ch2-012",
+      "chapter": 2,
+      "term": "DeepBlue（1997）",
+      "definition": "IBMのチェス専用機。1997年に世界王者カスパロフを破る。",
+      "explanation": "探索＋評価関数の力技で人間を超えた最初の象徴的事例。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=783"
+    },
+    {
+      "id": "ch2-013",
+      "chapter": 2,
+      "term": "Watson（2011）",
+      "definition": "IBMの質問応答システム。米国クイズ番組Jeopardy!でチャンピオンに勝利。",
+      "explanation": "膨大な非構造データから自然言語クエリで回答。医療応用も展開された。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=783"
+    },
+    {
+      "id": "ch2-014",
+      "chapter": 2,
+      "term": "AlphaGo（2016）",
+      "definition": "DeepMindの囲碁AI。2016年トップ棋士イ・セドルを破った。",
+      "explanation": "DL＋強化学習＋MCTSの組合せ。後継AlphaGo Zero/AlphaZero/MuZeroへ進化。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=783"
+    },
+    {
+      "id": "ch2-015",
+      "chapter": 2,
+      "term": "ImageNet / ILSVRC",
+      "definition": "大規模画像データセットILSVRCはAlexNetの勝利でDLブームの起爆剤に。",
+      "explanation": "2012年AlexNet（ヒントン研）がエラー率を劇的に下げ、DL時代を決定づけた。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=783"
+    },
+    {
+      "id": "ch2-016",
+      "chapter": 2,
+      "term": "ビッグデータ・GPU・アルゴリズム",
+      "definition": "第3次AIブームを支えた3要素。データ量・計算資源・学習手法の進化。",
+      "explanation": "クラウド普及、GPGPU、誤差逆伝播再評価などが揃って実用化が一気に進んだ。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=783"
+    },
+    {
+      "id": "ch2-017",
+      "chapter": 2,
+      "term": "ムーアの法則",
+      "definition": "半導体の集積密度が約2年で2倍になるという経験則。",
+      "explanation": "計算性能向上の前提とされてきたが、近年は鈍化傾向。GPU/TPU等専用ハードでカバー。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=783"
+    },
+    {
+      "id": "ch2-018",
+      "chapter": 2,
+      "term": "Transformer登場（2017）",
+      "definition": "Google「Attention is All You Need」で発表。注意機構ベースの汎用モデル。",
+      "explanation": "BERT・GPT等の基盤。NLPだけでなく画像・音声・マルチモーダルへ波及。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=783"
+    },
+
+    {
+      "id": "ch3-001",
+      "chapter": 3,
+      "term": "教師あり学習",
+      "definition": "入力と正解ラベルのペアからモデルを学習させる手法。",
+      "explanation": "回帰（連続値予測）と分類（離散ラベル予測）に大別。代表例：回帰=住宅価格予測、分類=画像認識。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+    {
+      "id": "ch3-002",
+      "chapter": 3,
+      "term": "教師なし学習",
+      "definition": "正解ラベルなしのデータから構造やパターンを発見する手法。",
+      "explanation": "クラスタリング（k-means等）、次元削減（PCA・t-SNE）、密度推定が代表。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+    {
+      "id": "ch3-003",
+      "chapter": 3,
+      "term": "強化学習",
+      "definition": "エージェントが環境と相互作用し、報酬を最大化する行動方針を学ぶ手法。",
+      "explanation": "状態・行動・報酬・方策が基本要素。Q学習、方策勾配法などがある。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+    {
+      "id": "ch3-004",
+      "chapter": 3,
+      "term": "線形回帰",
+      "definition": "入力と出力の線形関係 y = wx + b をデータから学習する基本的な回帰モデル。",
+      "explanation": "最小二乗法でパラメータ推定。多変量への拡張で重回帰となる。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+    {
+      "id": "ch3-005",
+      "chapter": 3,
+      "term": "ロジスティック回帰",
+      "definition": "シグモイド関数で出力を0〜1に変換し、二値分類の確率を予測するモデル。",
+      "explanation": "名前は回帰だが分類に使う。多クラスへはソフトマックスで拡張。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+    {
+      "id": "ch3-006",
+      "chapter": 3,
+      "term": "サポートベクターマシン（SVM）",
+      "definition": "クラス間のマージンを最大化する超平面を学習する分類器。",
+      "explanation": "カーネル法で非線形分離も可能。DL登場前の主力アルゴリズムのひとつ。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+    {
+      "id": "ch3-007",
+      "chapter": 3,
+      "term": "決定木",
+      "definition": "if-thenの条件分岐を木構造にして分類・回帰を行うモデル。",
+      "explanation": "解釈性が高い。情報利得・ジニ不純度で分割を決定。過学習しやすい。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+    {
+      "id": "ch3-008",
+      "chapter": 3,
+      "term": "ランダムフォレスト",
+      "definition": "多数の決定木を並列に学習させ多数決/平均で予測する集団学習。",
+      "explanation": "バギングの一種。特徴量もランダムサンプリングする。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+    {
+      "id": "ch3-009",
+      "chapter": 3,
+      "term": "アンサンブル学習（バギング/ブースティング/スタッキング）",
+      "definition": "複数モデルを組み合わせて予測精度を高める手法群。",
+      "explanation": "バギング=並列＋多数決、ブースティング=逐次的に弱学習器を強化、スタッキング=メタ学習器で統合。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+    {
+      "id": "ch3-010",
+      "chapter": 3,
+      "term": "勾配ブースティング（XGBoost / LightGBM）",
+      "definition": "誤差を順次補正する弱学習器を加算していくブースティング手法。",
+      "explanation": "Kaggleで圧倒的実績。テーブルデータでDLより強いことも多い。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+    {
+      "id": "ch3-011",
+      "chapter": 3,
+      "term": "k近傍法（k-NN）",
+      "definition": "新規データと最も近いk個の既知データから多数決/平均で予測するノンパラメトリック手法。",
+      "explanation": "学習はデータ保持のみで遅延学習。距離尺度（ユークリッド等）依存。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+    {
+      "id": "ch3-012",
+      "chapter": 3,
+      "term": "k-means法",
+      "definition": "データをk個のクラスタに分割する代表的なクラスタリングアルゴリズム。",
+      "explanation": "重心更新と再割当を反復。kの選定にはエルボー法・シルエット係数等を用いる。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+    {
+      "id": "ch3-013",
+      "chapter": 3,
+      "term": "主成分分析（PCA）",
+      "definition": "分散最大方向の軸を見つけ高次元データを低次元に圧縮する次元削減手法。",
+      "explanation": "可視化・ノイズ除去・特徴抽出に利用。線形変換のため非線形構造の表現には限界。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+    {
+      "id": "ch3-014",
+      "chapter": 3,
+      "term": "ホールドアウト / k-分割交差検証",
+      "definition": "モデル汎化性能を評価するためデータを訓練・検証・テストに分ける方法。",
+      "explanation": "k-分割は全データを順番に検証用に使い、kスコア平均で評価する。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+    {
+      "id": "ch3-015",
+      "chapter": 3,
+      "term": "過学習（オーバーフィッティング）",
+      "definition": "訓練データに適合しすぎて未知データへの汎化性能が落ちる状態。",
+      "explanation": "対策：データ拡張、正則化、早期終了、ドロップアウトなど。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+    {
+      "id": "ch3-016",
+      "chapter": 3,
+      "term": "正則化（L1 / L2）",
+      "definition": "損失関数にパラメータの大きさ罰則を加え過学習を抑える手法。",
+      "explanation": "L1=Lasso（スパース化＝特徴選択）、L2=Ridge（重みを小さくする）、両方=ElasticNet。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+    {
+      "id": "ch3-017",
+      "chapter": 3,
+      "term": "混同行列・適合率・再現率・F値",
+      "definition": "分類モデルの評価指標。Precision=的中率、Recall=取りこぼしの無さ、F1=その調和平均。",
+      "explanation": "クラス不均衡時はAccuracyだけでは不十分。用途に応じて優先指標を選ぶ。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+    {
+      "id": "ch3-018",
+      "chapter": 3,
+      "term": "ROC曲線 / AUC",
+      "definition": "閾値を動かしたときのTPR-FPR曲線とその下面積。1に近いほど分類性能が高い。",
+      "explanation": "クラス不均衡に頑健。AUC=0.5はランダム同等。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+    {
+      "id": "ch3-019",
+      "chapter": 3,
+      "term": "バイアス・バリアンス分解",
+      "definition": "予測誤差をモデルの偏り（バイアス）とばらつき（バリアンス）に分けて解釈する考え方。",
+      "explanation": "高バイアス＝未学習、高バリアンス＝過学習。両者はトレードオフ。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+    {
+      "id": "ch3-020",
+      "chapter": 3,
+      "term": "特徴量エンジニアリング",
+      "definition": "ドメイン知識を使って入力データから有効な特徴量を作り出す作業。",
+      "explanation": "古典的MLでは精度を大きく左右。DLは表現学習で自動化する側面が強い。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=1465"
+    },
+
+    {
+      "id": "ch4-001",
+      "chapter": 4,
+      "term": "ニューラルネットワーク",
+      "definition": "脳の神経細胞を模倣した、ノード（ニューロン）と重みからなる学習モデル。",
+      "explanation": "入力層・中間層・出力層で構成され、中間層を多層化したものがディープラーニング。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=2528"
+    },
+    {
+      "id": "ch4-002",
+      "chapter": 4,
+      "term": "パーセプトロン",
+      "definition": "1958年ローゼンブラット提案、線形分離可能な問題を学習できる最古のNN。",
+      "explanation": "XORを学習できないことをミンスキーらが指摘し第1次AI冬の時代の一因に。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=2528"
+    },
+    {
+      "id": "ch4-003",
+      "chapter": 4,
+      "term": "多層パーセプトロン（MLP）",
+      "definition": "中間層を持ち非線形分離も可能になった全結合NN。",
+      "explanation": "誤差逆伝播法（バックプロパゲーション）の再発見で実用化が進んだ。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=2528"
+    },
+    {
+      "id": "ch4-004",
+      "chapter": 4,
+      "term": "ディープラーニング（深層学習）",
+      "definition": "中間層を多数持つ深いNNを大規模データとGPUで学習させる手法群。",
+      "explanation": "特徴量を自動抽出（表現学習）でき、画像・音声・自然言語で従来手法を凌駕。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=2528"
+    },
+    {
+      "id": "ch4-005",
+      "chapter": 4,
+      "term": "誤差逆伝播法",
+      "definition": "出力誤差を出力層から入力層へ連鎖律で伝播させ重みを更新する学習法。",
+      "explanation": "1986年ラメルハート・ヒントンらが普及。DLの学習基盤。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=2528"
+    },
+    {
+      "id": "ch4-006",
+      "chapter": 4,
+      "term": "勾配降下法（SGD/Mini-Batch）",
+      "definition": "損失関数の勾配方向にパラメータを少しずつ更新し最小化する最適化法。",
+      "explanation": "全データ=バッチ、1個=オンライン、間=ミニバッチ。実用は大半がミニバッチ。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=2528"
+    },
+    {
+      "id": "ch4-007",
+      "chapter": 4,
+      "term": "勾配消失・勾配爆発問題",
+      "definition": "層が深いと勾配がゼロや無限大に発散して学習が止まる現象。",
+      "explanation": "ReLUの採用、適切な初期化、バッチ正規化、残差接続などで緩和。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=2528"
+    },
+    {
+      "id": "ch4-008",
+      "chapter": 4,
+      "term": "活性化関数（ReLU / シグモイド / tanh / GELU）",
+      "definition": "ニューロン出力に非線形性を与える関数。NNの表現力の源。",
+      "explanation": "ReLU=0以下を切り高速・勾配消失耐性。Transformer系はGELU多用。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=2528"
+    },
+    {
+      "id": "ch4-009",
+      "chapter": 4,
+      "term": "ソフトマックス関数",
+      "definition": "出力を全クラスの確率分布（合計1）に変換する関数。",
+      "explanation": "多クラス分類の出力層に用いる。クロスエントロピー損失と組み合わせるのが定番。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=2528"
+    },
+    {
+      "id": "ch4-010",
+      "chapter": 4,
+      "term": "損失関数（クロスエントロピー / MSE）",
+      "definition": "予測と正解の差を数値化し最小化対象とする関数。",
+      "explanation": "回帰=MSE/MAE、分類=クロスエントロピーが基本。タスクで使い分け。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=2528"
+    },
+    {
+      "id": "ch4-011",
+      "chapter": 4,
+      "term": "オプティマイザ（SGD/Momentum/Adam/AdamW）",
+      "definition": "勾配情報をどう使ってパラメータ更新するかを決める最適化アルゴリズム群。",
+      "explanation": "Adamは1次・2次モーメント推定で安定・高速。Transformer系はAdamW多用。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=2528"
+    },
+    {
+      "id": "ch4-012",
+      "chapter": 4,
+      "term": "学習率（Learning Rate）",
+      "definition": "1回の更新でパラメータを動かす幅。大きすぎると発散、小さすぎると停滞。",
+      "explanation": "学習率スケジューラ（Cosine、Warmup等）で動的調整するのが一般的。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=2528"
+    },
+    {
+      "id": "ch4-013",
+      "chapter": 4,
+      "term": "事前学習＋ファインチューニング",
+      "definition": "大規模データでベースモデルを学習し、目的タスクで追加学習するパラダイム。",
+      "explanation": "BERT、GPTで定番化。少量データでも高性能を出せる。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=2528"
+    },
+    {
+      "id": "ch4-014",
+      "chapter": 4,
+      "term": "オートエンコーダ（AE）",
+      "definition": "入力を低次元潜在表現に圧縮→再構成する教師なしNN。",
+      "explanation": "次元削減・異常検知・事前学習に使う。発展形にVAE・Denoising AE。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=2528"
+    },
+    {
+      "id": "ch4-015",
+      "chapter": 4,
+      "term": "ディープビリーフネットワーク / 制限ボルツマンマシン",
+      "definition": "ヒントンらが提案した、層ごとに教師なし事前学習する深層モデル。",
+      "explanation": "DL再興の起点となった2006年論文。現在主流は誤差逆伝播＋大規模データ。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=2528"
+    },
+
+    {
+      "id": "ch5-001",
+      "chapter": 5,
+      "term": "畳み込みニューラルネットワーク（CNN）",
+      "definition": "畳み込み層・プーリング層で局所特徴を抽出する画像向けNN。",
+      "explanation": "LeNet→AlexNet→VGG→ResNet→EfficientNetと進化。重み共有で省パラメータ。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=3360"
+    },
+    {
+      "id": "ch5-002",
+      "chapter": 5,
+      "term": "プーリング層（Max / Average）",
+      "definition": "特徴マップを縮小し平行移動不変性と計算量削減を担う層。",
+      "explanation": "Max Poolingが主流。最近はストライド畳み込みで代替されることも。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=3360"
+    },
+    {
+      "id": "ch5-003",
+      "chapter": 5,
+      "term": "AlexNet / VGG / GoogLeNet / ResNet / EfficientNet",
+      "definition": "CNNの代表アーキテクチャ。深さ・幅・解像度のバランス進化を体現。",
+      "explanation": "ResNetはスキップ接続で超深層化を実現、EfficientNetは複合スケーリング。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=3360"
+    },
+    {
+      "id": "ch5-004",
+      "chapter": 5,
+      "term": "残差接続（Skip Connection / ResNet）",
+      "definition": "入力をそのまま後段に足し合わせ、勾配消失を緩和する仕組み。",
+      "explanation": "100層超の深層化を実現。Transformerでも標準採用される基本部品。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=3360"
+    },
+    {
+      "id": "ch5-005",
+      "chapter": 5,
+      "term": "再帰型ニューラルネットワーク（RNN）",
+      "definition": "時系列データを扱えるよう過去の状態を再帰的に入力するNN。",
+      "explanation": "長期依存に弱く、勾配消失/爆発が課題。LSTM・GRUで改良。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=3360"
+    },
+    {
+      "id": "ch5-006",
+      "chapter": 5,
+      "term": "LSTM / GRU",
+      "definition": "ゲート機構で長期記憶を扱えるようにしたRNNの拡張。",
+      "explanation": "LSTM=入力/忘却/出力ゲート、GRU=更新/リセットゲートで簡略化。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=3360"
+    },
+    {
+      "id": "ch5-007",
+      "chapter": 5,
+      "term": "Attention機構",
+      "definition": "入力系列のどこに注目するかを動的に重み付けする仕組み。",
+      "explanation": "翻訳タスクで威力。Self-Attention=自分自身の系列内で関連を学ぶ。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=3360"
+    },
+    {
+      "id": "ch5-008",
+      "chapter": 5,
+      "term": "Transformer",
+      "definition": "Self-Attentionだけで構成され、並列計算と長距離依存を両立する汎用モデル。",
+      "explanation": "Encoder-Decoder型。BERT（Encoder）、GPT（Decoder）など系譜が分岐。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=3360"
+    },
+    {
+      "id": "ch5-009",
+      "chapter": 5,
+      "term": "ドロップアウト",
+      "definition": "学習時にランダムにユニットを無効化し過学習を防ぐ正則化手法。",
+      "explanation": "ヒントンら提案。アンサンブル効果と等価とされる。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=3360"
+    },
+    {
+      "id": "ch5-010",
+      "chapter": 5,
+      "term": "バッチ正規化（Batch Normalization）",
+      "definition": "ミニバッチ単位で出力を標準化し、学習安定化と高速化を図る層。",
+      "explanation": "副次的に過学習抑制効果あり。Layer NormはTransformerで定番。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=3360"
+    },
+    {
+      "id": "ch5-011",
+      "chapter": 5,
+      "term": "データ拡張（Data Augmentation）",
+      "definition": "回転・反転・色変換・ノイズ付加等で訓練データを水増しする手法。",
+      "explanation": "MixUp、CutMix、RandAugmentなど高度な手法も多数。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=3360"
+    },
+    {
+      "id": "ch5-012",
+      "chapter": 5,
+      "term": "転移学習 / ファインチューニング",
+      "definition": "既存モデルの知識を新タスクに流用し、少量データで高性能を狙う手法。",
+      "explanation": "特徴抽出器として固定する場合と、全層を微調整する場合がある。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=3360"
+    },
+    {
+      "id": "ch5-013",
+      "chapter": 5,
+      "term": "GAN（敵対的生成ネットワーク）",
+      "definition": "GeneratorとDiscriminatorを競わせて高品質な生成を学ぶモデル。",
+      "explanation": "2014年Goodfellow提案。DCGAN、StyleGAN、CycleGAN等で発展。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=3360"
+    },
+    {
+      "id": "ch5-014",
+      "chapter": 5,
+      "term": "拡散モデル（Diffusion Model）",
+      "definition": "ノイズを段階的に除去して画像を生成する生成モデル。",
+      "explanation": "Stable Diffusion、DALL·Eで主流化。GANより安定・高品質生成が容易。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=3360"
+    },
+    {
+      "id": "ch5-015",
+      "chapter": 5,
+      "term": "事前学習言語モデル（BERT / GPT）",
+      "definition": "大規模コーパスで自己教師あり学習し、汎用言語表現を獲得したTransformer系モデル。",
+      "explanation": "BERTはMLMで双方向、GPTは自己回帰の単方向。タスク汎用化を実現。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=3360"
+    },
+    {
+      "id": "ch5-016",
+      "chapter": 5,
+      "term": "Vision Transformer（ViT）",
+      "definition": "画像をパッチに分割しTransformerで処理する画像認識モデル。",
+      "explanation": "大規模事前学習でCNNを凌駕することも。マルチモーダルの基盤。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=3360"
+    },
+
+    {
+      "id": "ch6-001",
+      "chapter": 6,
+      "term": "画像分類",
+      "definition": "画像が属するクラスを推定するタスク。",
+      "explanation": "ILSVRCが代表的ベンチマーク。AlexNet以降CNNが定番、近年はViTも台頭。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4009"
+    },
+    {
+      "id": "ch6-002",
+      "chapter": 6,
+      "term": "物体検出（Object Detection）",
+      "definition": "画像中の物体のクラスと位置（バウンディングボックス）を同時に推定。",
+      "explanation": "Faster R-CNN（Two-stage）、YOLO/SSD（One-stage）。リアルタイム用途はYOLO系。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4009"
+    },
+    {
+      "id": "ch6-003",
+      "chapter": 6,
+      "term": "セグメンテーション",
+      "definition": "画素単位でクラスを推定するタスク（セマンティック/インスタンス/パノプティック）。",
+      "explanation": "U-Net、Mask R-CNN、SAMが代表。医療画像・自動運転で重要。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4009"
+    },
+    {
+      "id": "ch6-004",
+      "chapter": 6,
+      "term": "自然言語処理（NLP）",
+      "definition": "人間の言語をコンピュータに扱わせる分野。翻訳・要約・感情分析など。",
+      "explanation": "形態素解析→ベクトル化（Word2Vec）→Transformer→LLMと進化。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4009"
+    },
+    {
+      "id": "ch6-005",
+      "chapter": 6,
+      "term": "Word2Vec / GloVe / fastText",
+      "definition": "単語を分散表現（ベクトル）に変換する手法。意味類似度が幾何距離で測れる。",
+      "explanation": "Word2Vec=CBOW/Skip-gram、fastText=サブワード活用で未知語に強い。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4009"
+    },
+    {
+      "id": "ch6-006",
+      "chapter": 6,
+      "term": "機械翻訳（Seq2Seq → Transformer）",
+      "definition": "原文系列から訳文系列を生成するタスク。",
+      "explanation": "RNNベースSeq2Seq＋Attention→Transformerで品質飛躍。Google翻訳等で実用化。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4009"
+    },
+    {
+      "id": "ch6-007",
+      "chapter": 6,
+      "term": "音声認識（ASR）",
+      "definition": "音声を文字列に変換するタスク。スマートスピーカー、議事録自動化に活躍。",
+      "explanation": "従来HMM、現在はTransformer系（Whisper等）。エンドツーエンド学習が主流。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4009"
+    },
+    {
+      "id": "ch6-008",
+      "chapter": 6,
+      "term": "音声合成（TTS）",
+      "definition": "テキストから自然な音声を生成するタスク。",
+      "explanation": "Tacotron、WaveNet、VALL-E等。話者性・感情も制御可能に。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4009"
+    },
+    {
+      "id": "ch6-009",
+      "chapter": 6,
+      "term": "強化学習による囲碁・ゲームAI",
+      "definition": "AlphaGo/AlphaZero/MuZero等、自己対戦でプロ超えを実現。",
+      "explanation": "MCTS×DL×強化学習。汎用化したAlphaZeroはチェス・将棋にも対応。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4009"
+    },
+    {
+      "id": "ch6-010",
+      "chapter": 6,
+      "term": "自動運転レベル（0〜5）",
+      "definition": "SAE分類でレベル0=手動、5=完全自動。レベル3で条件付き自動運転。",
+      "explanation": "DLは認識・予測で中核。日本でレベル3型式指定（2020年）。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4009"
+    },
+    {
+      "id": "ch6-011",
+      "chapter": 6,
+      "term": "推薦システム",
+      "definition": "ユーザーの嗜好を予測し関連アイテムを提示するシステム。",
+      "explanation": "協調フィルタリング、コンテンツベース、行列分解、近年は深層モデル/two-tower。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4009"
+    },
+    {
+      "id": "ch6-012",
+      "chapter": 6,
+      "term": "異常検知",
+      "definition": "正常パターンから外れたデータを検出するタスク。",
+      "explanation": "教師なし（AE再構成誤差）、半教師（One-Class SVM）など。製造・金融で多用。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4009"
+    },
+    {
+      "id": "ch6-013",
+      "chapter": 6,
+      "term": "生成AI（Generative AI）",
+      "definition": "テキスト・画像・音声・動画などを生成するAI技術全般。",
+      "explanation": "ChatGPT、Stable Diffusion、Sora等。基盤モデル＋ファインチューニングが主流。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4009"
+    },
+    {
+      "id": "ch6-014",
+      "chapter": 6,
+      "term": "LLM（大規模言語モデル）",
+      "definition": "数十億〜数兆パラメータ規模のTransformer系言語モデル。",
+      "explanation": "GPT-4、Claude、Geminiが代表。In-context learning、思考連鎖で高い汎用性。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4009"
+    },
+    {
+      "id": "ch6-015",
+      "chapter": 6,
+      "term": "プロンプトエンジニアリング",
+      "definition": "LLMから望む出力を得るために入力（プロンプト）を設計する技術。",
+      "explanation": "Few-shot、Chain-of-Thought、ReAct等。RAGと組み合わせると精度向上。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4009"
+    },
+    {
+      "id": "ch6-016",
+      "chapter": 6,
+      "term": "RAG（Retrieval Augmented Generation）",
+      "definition": "外部知識ベースから関連文書を取得しLLMの応答精度を高める手法。",
+      "explanation": "ハルシネーション抑制、最新情報反映、社内ナレッジ活用に有効。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4009"
+    },
+    {
+      "id": "ch6-017",
+      "chapter": 6,
+      "term": "マルチモーダルAI",
+      "definition": "テキスト・画像・音声等、複数モーダルを統合的に扱うAI。",
+      "explanation": "CLIP、GPT-4V、Geminiなど。VQA、画像キャプション、動画理解が応用例。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4009"
+    },
+    {
+      "id": "ch6-018",
+      "chapter": 6,
+      "term": "AIエージェント",
+      "definition": "LLMが自律的に計画・ツール利用・実行を行う仕組み。",
+      "explanation": "ReAct、AutoGPT、Function Calling、MCPなど。タスク自動化の中核。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4009"
+    },
+
+    {
+      "id": "ch7-001",
+      "chapter": 7,
+      "term": "AI開発のCRISP-DM",
+      "definition": "ビジネス理解→データ理解→準備→モデリング→評価→展開の反復型開発プロセス。",
+      "explanation": "AI/データプロジェクト共通の標準ライフサイクル。MLOpsの基盤。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4968"
+    },
+    {
+      "id": "ch7-002",
+      "chapter": 7,
+      "term": "PoC（Proof of Concept）",
+      "definition": "本番展開前に小規模で実現可能性・効果を検証する段階。",
+      "explanation": "AIプロジェクトはPoC止まりになりがち。本番化への計画が重要。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4968"
+    },
+    {
+      "id": "ch7-003",
+      "chapter": 7,
+      "term": "MLOps",
+      "definition": "ML開発と運用を統合し、継続的な学習・デプロイ・監視を行うプラクティス。",
+      "explanation": "DevOps＋データ＋モデルのCI/CD。データ・モデルドリフト監視が鍵。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4968"
+    },
+    {
+      "id": "ch7-004",
+      "chapter": 7,
+      "term": "データドリフト / コンセプトドリフト",
+      "definition": "入力データやタスクの本質が時間で変化し、モデル精度が劣化する現象。",
+      "explanation": "監視・再学習・モデル更新で対処。MLOpsの重要監視対象。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4968"
+    },
+    {
+      "id": "ch7-005",
+      "chapter": 7,
+      "term": "AI倫理",
+      "definition": "公平性・透明性・説明可能性・プライバシー等、AI開発・運用に求められる規範。",
+      "explanation": "JDLA・OECD・EU等が原則を提示。FATE（Fairness, Accountability, Transparency, Ethics）。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4968"
+    },
+    {
+      "id": "ch7-006",
+      "chapter": 7,
+      "term": "XAI（説明可能なAI）",
+      "definition": "AIの判断根拠を人間が理解できる形で示す技術。",
+      "explanation": "LIME、SHAP、Grad-CAM、注意可視化など。医療・金融・司法で必須。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4968"
+    },
+    {
+      "id": "ch7-007",
+      "chapter": 7,
+      "term": "公平性（Fairness）/ バイアス",
+      "definition": "学習データの偏りで特定属性に不利な判断が出る問題と、その是正の取り組み。",
+      "explanation": "Demographic Parity、Equal Opportunity等の指標。データ・モデル・評価で対策。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4968"
+    },
+    {
+      "id": "ch7-008",
+      "chapter": 7,
+      "term": "プライバシー保護技術（差分プライバシー / 連合学習）",
+      "definition": "個人データを守りながらAI学習する技術。",
+      "explanation": "差分プライバシー＝統計ノイズ付加、連合学習＝端末側で学習しモデル統合。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4968"
+    },
+    {
+      "id": "ch7-009",
+      "chapter": 7,
+      "term": "敵対的攻撃（Adversarial Attack）",
+      "definition": "微小な摂動で誤分類を誘発する攻撃。AIシステムのセキュリティ課題。",
+      "explanation": "FGSM、PGD等。防御=Adversarial Training、入力変換、検知。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4968"
+    },
+    {
+      "id": "ch7-010",
+      "chapter": 7,
+      "term": "ハルシネーション",
+      "definition": "LLMがもっともらしい嘘や事実誤認を生成する現象。",
+      "explanation": "対策：RAG、ファクトチェック、温度低下、Reflectionプロンプト、出典必須化。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4968"
+    },
+    {
+      "id": "ch7-011",
+      "chapter": 7,
+      "term": "Human-in-the-Loop（HITL）",
+      "definition": "AIの出力を人間が確認・修正しながら運用・学習する仕組み。",
+      "explanation": "重要判断・高リスク領域で必須。RLHFも広義のHITL。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4968"
+    },
+    {
+      "id": "ch7-012",
+      "chapter": 7,
+      "term": "AIガバナンス",
+      "definition": "AIの開発・運用に関する組織的なルール・体制・監視の仕組み。",
+      "explanation": "経産省「AI事業者ガイドライン」、ISO/IEC 42001等。経営層の関与が要点。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=4968"
+    },
+
+    {
+      "id": "ch8-001",
+      "chapter": 8,
+      "term": "個人情報保護法",
+      "definition": "個人情報の取得・利用・第三者提供・安全管理等を定める日本の法律。",
+      "explanation": "2022年改正で仮名加工情報・越境移転規制強化。AI学習データにも適用。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=5438"
+    },
+    {
+      "id": "ch8-002",
+      "chapter": 8,
+      "term": "著作権法とAI（30条の4 等）",
+      "definition": "情報解析目的での著作物利用を一定要件下で認める日本の特則。",
+      "explanation": "学習用データ収集に幅広く認められる一方、生成物の侵害判定は別問題。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=5438"
+    },
+    {
+      "id": "ch8-003",
+      "chapter": 8,
+      "term": "GDPR（EU一般データ保護規則）",
+      "definition": "EUの個人データ保護法。違反時は売上の最大4%の制裁金。",
+      "explanation": "プロファイリング規制、自動意思決定の説明請求権、忘れられる権利等を含む。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=5438"
+    },
+    {
+      "id": "ch8-004",
+      "chapter": 8,
+      "term": "EU AI Act",
+      "definition": "EUがAIシステムをリスク別（許容不可/高/限定/最小）に規制する世界初の包括法。",
+      "explanation": "2024年成立、段階施行。基盤モデルへの透明性義務、禁止AI類型を規定。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=5438"
+    },
+    {
+      "id": "ch8-005",
+      "chapter": 8,
+      "term": "AI事業者ガイドライン（日本）",
+      "definition": "経産省・総務省が策定した、開発・提供・利用者向け統合ガイドライン。",
+      "explanation": "従来の3ガイドラインを統合。安全性・公平性・透明性等10項目を提示。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=5438"
+    },
+    {
+      "id": "ch8-006",
+      "chapter": 8,
+      "term": "広島AIプロセス / G7声明",
+      "definition": "G7が主導する高度AIに関する国際的な指針作りの枠組み。",
+      "explanation": "国際指針・行動規範を採択。日本がホスト国として主導した経緯。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=5438"
+    },
+    {
+      "id": "ch8-007",
+      "chapter": 8,
+      "term": "OECD AI原則",
+      "definition": "成長・開発志向の信頼できるAIに関する国際的な5原則と政策提言。",
+      "explanation": "包摂的成長、人間中心、透明性、頑健性・安全性、説明責任。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=5438"
+    },
+    {
+      "id": "ch8-008",
+      "chapter": 8,
+      "term": "不正競争防止法・営業秘密",
+      "definition": "営業秘密や限定提供データの不正取得・利用を禁ずる日本の法律。",
+      "explanation": "AI学習データの不正取得や、モデル抽出攻撃等が問題化。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=5438"
+    },
+    {
+      "id": "ch8-009",
+      "chapter": 8,
+      "term": "ディープフェイク",
+      "definition": "DLで合成された本物そっくりの映像・音声。詐欺・誤情報の温床に。",
+      "explanation": "対策：来歴認証（C2PA）、検出AI、法規制（米州法・EU AI Act）。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=5438"
+    },
+    {
+      "id": "ch8-010",
+      "chapter": 8,
+      "term": "アルゴリズムバイアス",
+      "definition": "学習データや設計に起因する不公平・差別的判断。",
+      "explanation": "採用AI、与信AI、顔認識で問題化。データ多様性・監査が必須。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=5438"
+    },
+    {
+      "id": "ch8-011",
+      "chapter": 8,
+      "term": "AIの透明性・説明責任",
+      "definition": "判断プロセスや学習データを開示し、結果について責任を持つ概念。",
+      "explanation": "EU AI Actで法的義務化。XAIや透明性レポートで対応。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=5438"
+    },
+    {
+      "id": "ch8-012",
+      "chapter": 8,
+      "term": "プロダクト責任 / PL法",
+      "definition": "欠陥のある製品で生じた損害について製造業者等が負う責任。",
+      "explanation": "EUは製品責任指令を改正しソフト・AIを明示。日本でも議論進行中。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=5438"
+    },
+    {
+      "id": "ch8-013",
+      "chapter": 8,
+      "term": "学習データの権利処理",
+      "definition": "学習に用いる著作物・個人データの権利・許諾・契約条件の整理。",
+      "explanation": "オプトアウト方式、ライセンス、契約での明示が実務の要点。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=5438"
+    },
+    {
+      "id": "ch8-014",
+      "chapter": 8,
+      "term": "生成AIと著作権侵害リスク",
+      "definition": "生成物が既存著作物に類似することによる侵害可能性。",
+      "explanation": "依拠性＋類似性で判断。プロンプトや学習元の管理が重要。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=5438"
+    },
+    {
+      "id": "ch8-015",
+      "chapter": 8,
+      "term": "倫理的AIガイドライン（IEEE / 内閣府人間中心AI社会原則）",
+      "definition": "技術団体や政府がAIの倫理的開発・利用を促す指針。",
+      "explanation": "内閣府は7原則（人間中心、教育・リテラシー、プライバシー、セキュリティ、公正競争、公平性・説明責任・透明性、イノベーション）。",
+      "video_timestamp_url": "https://youtu.be/BO05K85SBag?t=5438"
+    }
+  ]
+}

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>G検定フラッシュカード｜2026/05/09 試験対策</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { fontFamily: { sans: ['system-ui','-apple-system','Segoe UI','Roboto','Helvetica','Arial','sans-serif','"Apple Color Emoji"','"Segoe UI Emoji"'] } } }
+    };
+  </script>
+  <style>
+    html, body { -webkit-text-size-adjust: 100%; }
+    .card-flip { perspective: 1200px; touch-action: pan-y; }
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.55s cubic-bezier(.2,.8,.2,1);
+    }
+    .card-inner.is-flipped { transform: rotateY(180deg); }
+    .card-face {
+      position: absolute; inset: 0;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 1.5rem;
+      border-radius: 1.25rem;
+    }
+    .card-back { transform: rotateY(180deg); }
+    .swipe-left { animation: swipeLeft 0.25s ease-out forwards; }
+    .swipe-right { animation: swipeRight 0.25s ease-out forwards; }
+    @keyframes swipeLeft { from { transform: translateX(0); opacity: 1; } to { transform: translateX(-30%); opacity: 0; } }
+    @keyframes swipeRight { from { transform: translateX(0); opacity: 1; } to { transform: translateX(30%); opacity: 0; } }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    button:focus-visible, select:focus-visible { outline: 2px solid #6366f1; outline-offset: 2px; }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors">
+  <div class="max-w-2xl mx-auto px-4 pt-3 pb-24">
+    <!-- Header -->
+    <header class="flex items-center justify-between gap-2 mb-3">
+      <div>
+        <h1 class="text-base sm:text-lg font-bold tracking-tight">G検定フラッシュカード</h1>
+        <p class="text-xs text-slate-500 dark:text-slate-400">JDLA Deep Learning for GENERAL 対策</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <div id="countdown" class="text-right">
+          <div class="text-[10px] text-slate-500 dark:text-slate-400">試験まで</div>
+          <div class="text-lg font-bold tabular-nums text-rose-600 dark:text-rose-400" id="countdownDays">--日</div>
+        </div>
+        <button id="themeToggle" type="button" aria-label="テーマ切替"
+          class="w-9 h-9 grid place-items-center rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800">
+          <span id="themeIcon" class="text-base">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mode + filter controls -->
+    <section class="grid grid-cols-2 gap-2 mb-2">
+      <label class="col-span-2 sm:col-span-1 block">
+        <span class="text-xs text-slate-500 dark:text-slate-400">章フィルタ</span>
+        <select id="chapterFilter"
+          class="mt-1 w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 text-sm">
+          <option value="all">全章（ALL）</option>
+        </select>
+      </label>
+      <label class="col-span-2 sm:col-span-1 block">
+        <span class="text-xs text-slate-500 dark:text-slate-400">モード</span>
+        <select id="modeSelect"
+          class="mt-1 w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 text-sm">
+          <option value="sequential">順番（既知も表示）</option>
+          <option value="random">ランダム</option>
+          <option value="review">苦手復習（不明だけ）</option>
+        </select>
+      </label>
+    </section>
+
+    <!-- Stats line -->
+    <div class="flex items-center justify-between text-xs text-slate-600 dark:text-slate-400 mb-2 px-1">
+      <span id="progressText">— / —</span>
+      <span class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span id="knownCount">0</span></span>
+        <span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-rose-500"></span><span id="unknownCount">0</span></span>
+        <button id="resetBtn" type="button" class="underline hover:text-slate-900 dark:hover:text-slate-200">リセット</button>
+      </span>
+    </div>
+
+    <!-- Card -->
+    <div id="cardWrap" class="card-flip">
+      <div id="cardInner" class="card-inner h-[62vh] min-h-[360px] max-h-[520px]" role="button" tabindex="0" aria-label="カードをタップでフリップ">
+        <!-- FRONT -->
+        <div class="card-face card-front bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="absolute top-3 left-4 text-[10px] uppercase tracking-wider text-slate-500 dark:text-slate-400">
+            <span id="frontChapterTag">第—章</span>
+          </div>
+          <div class="absolute top-3 right-4 text-[10px] text-slate-400 dark:text-slate-500" id="frontIdTag">--</div>
+          <div class="text-[11px] text-slate-500 dark:text-slate-400 mb-2">用語</div>
+          <h2 id="frontTerm" class="text-2xl sm:text-3xl font-bold text-center leading-snug">読み込み中...</h2>
+          <p class="absolute bottom-3 left-0 right-0 text-center text-[11px] text-slate-400 dark:text-slate-500">
+            タップで答えを見る
+          </p>
+        </div>
+        <!-- BACK -->
+        <div class="card-face card-back bg-indigo-50 dark:bg-slate-800 border border-indigo-200 dark:border-slate-700 shadow-sm overflow-y-auto scrollbar-hide">
+          <div class="absolute top-3 left-4 text-[10px] uppercase tracking-wider text-indigo-700 dark:text-indigo-300">
+            <span id="backChapterTag">第—章</span>
+          </div>
+          <div class="absolute top-3 right-4 text-[10px] text-indigo-700/70 dark:text-indigo-300/70" id="backIdTag">--</div>
+          <div class="w-full mt-6">
+            <h3 id="backTerm" class="text-base sm:text-lg font-bold text-indigo-900 dark:text-indigo-200 mb-2 text-center"></h3>
+            <p id="backDefinition" class="text-sm sm:text-base text-slate-800 dark:text-slate-100 mb-2 leading-relaxed"></p>
+            <p id="backExplanation" class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 mb-3 leading-relaxed"></p>
+            <a id="videoLink" href="#" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full bg-rose-600 text-white hover:bg-rose-700">
+              ▶ 該当章を動画で見る
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Action buttons -->
+    <div class="grid grid-cols-3 gap-2 mt-3">
+      <button id="markUnknownBtn" type="button"
+        class="rounded-xl px-3 py-3 text-sm font-bold bg-rose-100 text-rose-700 hover:bg-rose-200 dark:bg-rose-900/40 dark:text-rose-300 dark:hover:bg-rose-900/60 active:scale-[0.98]">
+        ✕ 不明
+      </button>
+      <button id="flipBtn" type="button"
+        class="rounded-xl px-3 py-3 text-sm font-bold bg-slate-200 text-slate-800 hover:bg-slate-300 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 active:scale-[0.98]">
+        ⤺ めくる
+      </button>
+      <button id="markKnownBtn" type="button"
+        class="rounded-xl px-3 py-3 text-sm font-bold bg-emerald-100 text-emerald-700 hover:bg-emerald-200 dark:bg-emerald-900/40 dark:text-emerald-300 dark:hover:bg-emerald-900/60 active:scale-[0.98]">
+        ✓ 既知
+      </button>
+    </div>
+
+    <div class="grid grid-cols-2 gap-2 mt-2">
+      <button id="prevBtn" type="button"
+        class="rounded-xl px-3 py-3 text-sm font-bold bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 active:scale-[0.98]">
+        ← 前へ
+      </button>
+      <button id="nextBtn" type="button"
+        class="rounded-xl px-3 py-3 text-sm font-bold bg-indigo-600 text-white hover:bg-indigo-700 active:scale-[0.98]">
+        次へ →
+      </button>
+    </div>
+
+    <p class="text-center text-[11px] text-slate-400 dark:text-slate-500 mt-3">
+      ← 横スワイプで移動 ／ タップ・スペースキーでフリップ ／ ←/→ で前後
+    </p>
+
+    <!-- Footer -->
+    <footer class="mt-8 text-center text-[11px] text-slate-400 dark:text-slate-500 leading-relaxed">
+      出典：YouTube「<a href="https://youtu.be/BO05K85SBag" target="_blank" rel="noopener noreferrer" class="underline">G検定 試験対策 一問一答100分！全8章問題集</a>」の章立てに準拠。<br />
+      用語解説は JDLA G検定公式シラバスをベースに作成。
+    </footer>
+  </div>
+
+  <script>
+    'use strict';
+
+    const EXAM_DATE = '2026-05-09';
+
+    const state = {
+      cards: [],
+      chapters: [],
+      filtered: [],
+      idx: 0,
+      isFlipped: false,
+      mode: 'sequential',
+      chapterFilter: 'all',
+      // sessionStorage backed progress: { [cardId]: 'known' | 'unknown' }
+      progress: {},
+    };
+
+    // ---------- Storage helpers (sessionStorage only) ----------
+    const STORAGE_KEY = 'gkentei-flashcards-progress-v1';
+    function loadProgress() {
+      try {
+        const raw = sessionStorage.getItem(STORAGE_KEY);
+        state.progress = raw ? JSON.parse(raw) : {};
+      } catch (e) { state.progress = {}; }
+    }
+    function saveProgress() {
+      try { sessionStorage.setItem(STORAGE_KEY, JSON.stringify(state.progress)); } catch (e) {}
+    }
+
+    // ---------- Theme ----------
+    function applyTheme(theme) {
+      const isDark = theme === 'dark' || (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.classList.toggle('dark', isDark);
+      document.getElementById('themeIcon').textContent = isDark ? '☀️' : '🌙';
+    }
+    const urlTheme = new URLSearchParams(window.location.search).get('theme');
+    let currentTheme = (urlTheme === 'dark' || urlTheme === 'light')
+      ? urlTheme
+      : (sessionStorage.getItem('gkentei-flashcards-theme') || 'auto');
+    applyTheme(currentTheme);
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      currentTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+      sessionStorage.setItem('gkentei-flashcards-theme', currentTheme);
+      applyTheme(currentTheme);
+    });
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      if (currentTheme === 'auto') applyTheme('auto');
+    });
+
+    // ---------- Countdown ----------
+    function updateCountdown() {
+      const now = new Date();
+      const exam = new Date(EXAM_DATE + 'T00:00:00+09:00');
+      const diffMs = exam - now;
+      const days = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+      const el = document.getElementById('countdownDays');
+      if (days > 0) el.textContent = `あと${days}日`;
+      else if (days === 0) el.textContent = '本日!';
+      else el.textContent = '終了';
+    }
+
+    // ---------- Filtering ----------
+    function rebuildFiltered() {
+      let pool = state.cards.slice();
+      if (state.chapterFilter !== 'all') {
+        const ch = parseInt(state.chapterFilter, 10);
+        pool = pool.filter(c => c.chapter === ch);
+      }
+      if (state.mode === 'review') {
+        pool = pool.filter(c => state.progress[c.id] === 'unknown');
+        if (pool.length === 0) {
+          // 苦手復習モードで0件 → 全部既知ということ
+          pool = state.cards.filter(c => state.chapterFilter === 'all' || c.chapter === parseInt(state.chapterFilter, 10));
+        }
+      }
+      if (state.mode === 'random') {
+        for (let i = pool.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [pool[i], pool[j]] = [pool[j], pool[i]];
+        }
+      }
+      state.filtered = pool;
+      state.idx = 0;
+      state.isFlipped = false;
+      render();
+    }
+
+    // ---------- Rendering ----------
+    function chapterLabel(ch) {
+      const c = state.chapters.find(x => x.id === ch);
+      return c ? `第${c.id}章 ${c.title}` : `第${ch}章`;
+    }
+
+    function render() {
+      const inner = document.getElementById('cardInner');
+      inner.classList.toggle('is-flipped', state.isFlipped);
+
+      const total = state.filtered.length;
+      const card = total > 0 ? state.filtered[state.idx] : null;
+
+      document.getElementById('progressText').textContent = total > 0
+        ? `${state.idx + 1} / ${total}`
+        : '0 / 0';
+
+      const knownCount = Object.values(state.progress).filter(v => v === 'known').length;
+      const unknownCount = Object.values(state.progress).filter(v => v === 'unknown').length;
+      document.getElementById('knownCount').textContent = knownCount;
+      document.getElementById('unknownCount').textContent = unknownCount;
+
+      if (!card) {
+        document.getElementById('frontTerm').textContent = '該当カードなし';
+        document.getElementById('frontChapterTag').textContent = '—';
+        document.getElementById('frontIdTag').textContent = '';
+        document.getElementById('backTerm').textContent = '';
+        document.getElementById('backDefinition').textContent = '';
+        document.getElementById('backExplanation').textContent = '';
+        document.getElementById('videoLink').href = '#';
+        return;
+      }
+
+      document.getElementById('frontTerm').textContent = card.term;
+      document.getElementById('frontChapterTag').textContent = chapterLabel(card.chapter);
+      document.getElementById('frontIdTag').textContent = card.id;
+
+      document.getElementById('backTerm').textContent = card.term;
+      document.getElementById('backDefinition').textContent = card.definition;
+      document.getElementById('backExplanation').textContent = card.explanation || '';
+      document.getElementById('backChapterTag').textContent = chapterLabel(card.chapter);
+      document.getElementById('backIdTag').textContent = card.id;
+      document.getElementById('videoLink').href = card.video_timestamp_url;
+    }
+
+    function flip() { state.isFlipped = !state.isFlipped; render(); }
+
+    function nextCard() {
+      if (state.filtered.length === 0) return;
+      state.idx = (state.idx + 1) % state.filtered.length;
+      state.isFlipped = false;
+      render();
+    }
+    function prevCard() {
+      if (state.filtered.length === 0) return;
+      state.idx = (state.idx - 1 + state.filtered.length) % state.filtered.length;
+      state.isFlipped = false;
+      render();
+    }
+
+    function markCurrent(status) {
+      const card = state.filtered[state.idx];
+      if (!card) return;
+      state.progress[card.id] = status;
+      saveProgress();
+      // 視覚的フィードバック → 自動で次へ
+      const inner = document.getElementById('cardInner');
+      inner.classList.add(status === 'known' ? 'swipe-left' : 'swipe-right');
+      setTimeout(() => {
+        inner.classList.remove('swipe-left', 'swipe-right');
+        nextCard();
+      }, 230);
+    }
+
+    function resetProgress() {
+      if (!confirm('進捗（既知・不明マーク）を全部リセットしてええか？')) return;
+      state.progress = {};
+      saveProgress();
+      rebuildFiltered();
+    }
+
+    // ---------- Touch swipe ----------
+    let touchStartX = null, touchStartY = null, touchStartTime = 0;
+    const cardWrap = document.getElementById('cardWrap');
+    cardWrap.addEventListener('touchstart', (e) => {
+      const t = e.changedTouches[0];
+      touchStartX = t.clientX; touchStartY = t.clientY; touchStartTime = Date.now();
+    }, { passive: true });
+    cardWrap.addEventListener('touchend', (e) => {
+      if (touchStartX == null) return;
+      const t = e.changedTouches[0];
+      const dx = t.clientX - touchStartX;
+      const dy = t.clientY - touchStartY;
+      const dt = Date.now() - touchStartTime;
+      touchStartX = touchStartY = null;
+      // タップ判定
+      if (Math.abs(dx) < 12 && Math.abs(dy) < 12 && dt < 350) { flip(); return; }
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+        if (dx < 0) nextCard(); else prevCard();
+      }
+    }, { passive: true });
+
+    // クリック（PC）
+    document.getElementById('cardInner').addEventListener('click', (e) => {
+      // ボタン以外クリックでフリップ
+      if (e.target.closest('a,button')) return;
+      flip();
+    });
+
+    // キーボード
+    document.addEventListener('keydown', (e) => {
+      if (e.target && (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT')) return;
+      if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); flip(); }
+      else if (e.key === 'ArrowLeft') prevCard();
+      else if (e.key === 'ArrowRight') nextCard();
+      else if (e.key === '1') markCurrent('unknown');
+      else if (e.key === '2') markCurrent('known');
+    });
+
+    // Buttons
+    document.getElementById('flipBtn').addEventListener('click', flip);
+    document.getElementById('nextBtn').addEventListener('click', nextCard);
+    document.getElementById('prevBtn').addEventListener('click', prevCard);
+    document.getElementById('markKnownBtn').addEventListener('click', () => markCurrent('known'));
+    document.getElementById('markUnknownBtn').addEventListener('click', () => markCurrent('unknown'));
+    document.getElementById('resetBtn').addEventListener('click', resetProgress);
+
+    document.getElementById('chapterFilter').addEventListener('change', (e) => {
+      state.chapterFilter = e.target.value;
+      rebuildFiltered();
+    });
+    document.getElementById('modeSelect').addEventListener('change', (e) => {
+      state.mode = e.target.value;
+      rebuildFiltered();
+    });
+
+    // ---------- Boot ----------
+    async function boot() {
+      loadProgress();
+      updateCountdown();
+      setInterval(updateCountdown, 60 * 1000);
+
+      try {
+        const res = await fetch('cards.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('cards.json fetch failed: ' + res.status);
+        const data = await res.json();
+        state.cards = data.cards;
+        state.chapters = data.chapters;
+
+        const sel = document.getElementById('chapterFilter');
+        for (const ch of state.chapters) {
+          const opt = document.createElement('option');
+          opt.value = ch.id;
+          opt.textContent = `第${ch.id}章 ${ch.title}`;
+          sel.appendChild(opt);
+        }
+
+        rebuildFiltered();
+      } catch (err) {
+        document.getElementById('frontTerm').textContent = '読み込み失敗';
+        document.getElementById('backDefinition').textContent =
+          'cards.json を読み込めませんでした。HTTPサーバ経由で開いてください（例: python3 -m http.server）。';
+        console.error(err);
+      }
+    }
+
+    boot();
+  </script>
+</body>
+</html>
