@@ -22,3 +22,6 @@ yarn-error.log*
 *.log
 .tmp/
 .cache/
+# env files
+.env
+.env.*
